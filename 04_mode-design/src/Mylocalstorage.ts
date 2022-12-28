@@ -6,6 +6,7 @@
 
 export default class MyLocalStorage {
   static localstorage: MyLocalStorage
+  private static count: number = 0
 
   private constructor() {
     console.log('调用了一次')
@@ -40,5 +41,13 @@ export default class MyLocalStorage {
   public getItem(key: string) {
     let value = localStorage.getItem(key)
     return value ? JSON.parse(value) : null
+  }
+
+  public static addCount() {
+    this.count += 3
+  }
+
+  public static getCount() {
+    return this.count
   }
 }
