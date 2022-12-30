@@ -1,6 +1,7 @@
 // 构建饿汉式单件设计模式
 
 export default class MyLocalStorage {
+  // 区别在这里
   static localstorage: MyLocalStorage = new MyLocalStorage();
   private static count: number = 0
 
