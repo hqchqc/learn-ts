@@ -3,7 +3,7 @@
 export default class MyLocalStorage {
   // 区别在这里
   static localstorage: MyLocalStorage = new MyLocalStorage();
-  private static count: number = 1
+  private static count: number = 0
 
   private constructor() {
     console.log('调用了一次')
